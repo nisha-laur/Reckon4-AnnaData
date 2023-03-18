@@ -11,11 +11,22 @@
 .home-body .home-header {
     height: 100%;
     width: 100%;
+    display: flex;
 }
+
+.home-header .header-text {
+    font-size: 3.9rem;
+    width: 500px;
+    margin-top: 166px;
+    margin-left: 150px;
+    line-height: 5rem;
+    font-weight: 600;
+}
+
 
 .home-body .company-banner {
     width: 100%;
-    background-color: #20313B;
+    background-color: #2F5349;
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
@@ -25,4 +36,19 @@
 .company-banner a img {
     width: 200px;
     height: 100px;
+}
+
+@media (max-width:836px) {
+    .home-body {
+        background: none;
+    }
+
+    .home-header .header-text {
+        width: 90%;
+        margin-top: 0;
+        margin-left: 0;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
 }

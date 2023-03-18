@@ -5,6 +5,9 @@ import crop1 from '../../Assets/crop1.jpeg'
 import service2 from '../../Assets/service2.jpeg'
 import alert from '../../Assets/alert.jpeg'
 import volunteer from '../../Assets/volunteer.jpeg'
+import chatbot from '../../Assets/chat.png'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 export default function Service() {
     return (
@@ -51,6 +54,18 @@ export default function Service() {
                             Get Alerts Feature
                         </div>
                         <a href="/service">Start</a>
+                    </div>
+                </div>
+                <div className="service">
+                    <div className="service-img">
+                        <img src={chatbot} alt="Chatbot" />
+                    </div>
+                    <div className="service-divider"></div>
+                    <div className="service-content">
+                        <div className="service-desc">
+                            Chatbot
+                        </div>
+                        <a href="/chat">Start</a>
                     </div>
                 </div>
                 <div className="service">

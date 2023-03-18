@@ -9,6 +9,7 @@ import Contact from './Components/Contact/contact'
 import Prediction from './Pages/PredictCrop/predictcrop'
 import Blog from './Pages/Blog/blog'
 import ChatBot from './Pages/ChatBot/chatbot'
+import Signup from './Pages/Volunteer/volunteer'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path='contact' element={<Contact />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='chat' element={<ChatBot />} />
+        <Route path='/volunteer' element={<Signup />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>

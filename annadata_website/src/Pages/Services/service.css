@@ -1,10 +1,21 @@
 .service-section {
     width: 100%;
+    margin: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
+    overflow: scroll;
+    padding: 20px 0;
+}
+
+.service-section::-webkit-scrollbar {
+    display: none;
+}
+
+.service-section {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .service-header {
@@ -29,8 +40,8 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 300px;
-    height: 400px;
+    width: 300px !important;
+    height: 400px !important;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -79,6 +90,14 @@
 
 .service:hover img {
     transform: scale(1.1);
+}
+
+.swiper {
+    height: 400px;
+}
+
+.swiper-wrapper {
+    height: 100%;
 }
 
 @media (max-width:800px) {

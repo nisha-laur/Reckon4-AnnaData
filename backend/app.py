@@ -4,6 +4,7 @@ from flask_cors import CORS
 from model.model import predict_data
 from PIL import Image
 from chatbot.main import chatbot_response
+from chatbot.weather import getWeather
 # Initializing flask app
 app = Flask(__name__)
 CORS(app)
@@ -51,9 +52,9 @@ def crop_disease():
 def chatbot():
     if (request.method == "POST"):
         msg = request.json['message']
-        res = chatbot_response(msg)
-        print(res)
-        return {"response": res}
+        print(msg)
+        if (msg == '1'):
+            return getWeather('jodhpur')
 
 
 # Running app

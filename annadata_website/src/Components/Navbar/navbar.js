@@ -92,7 +92,7 @@ export default function Navbar() {
                             <h3>Predict Crop</h3>
                         </div>
                     </a>
-                    <a href="/chat-bot" className='search-box-a'>
+                    <a href="/chat" className='search-box-a'>
                         <div className="search-box">
                             <SiChatbot color='#fff' />
                             <h3>ChatBot</h3>

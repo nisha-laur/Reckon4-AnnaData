@@ -39,15 +39,14 @@
     font-size: 1.1rem;
     padding: 10px 25px;
     font-weight: 500;
-    color: aliceblue;
 }
 
 .message-box .message-content.sender {
     border-radius: 20px 20px 0px 20px;
-    background-color: dodgerblue;
+    background-color: #EAF2EF;
 }
 
 .message-box .message-content.reciver {
     border-radius: 20px 20px 20px 0px;
-    background-color: red;
+    background-color: #FEDF73;
 }

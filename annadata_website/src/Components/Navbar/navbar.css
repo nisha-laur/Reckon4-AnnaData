@@ -41,8 +41,8 @@
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
+    height: 3px;
+    bottom: -5px;
     left: 0;
     background-color: #305349;
     transform-origin: bottom right;
@@ -57,7 +57,7 @@
 
 
 .nav2_center svg {
-    color: grey;
+    color: gold;
     cursor: pointer;
 }
 
@@ -73,7 +73,7 @@
     height: 100vh;
     z-index: 200;
     position: absolute;
-    background: #053464;
+    background: #2F5349;
     top: 0;
     left: 0;
     padding: 50px;
