@@ -1,0 +1,131 @@
+.prediction-window {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.prediction-window .predict-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 900px;
+    padding: 60px;
+    margin: 0 30px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #fff;
+}
+
+.prediction-window .predict-form .fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.predict-form .input-field input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: 2px solid #000;
+    color: #000;
+}
+
+
+.submit-btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 0 20px 0;
+}
+
+.submit-btn button {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #305349;
+}
+
+.result-window {
+    width: 900px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #305349;
+    display: none;
+}
+
+.result-window .given-data {
+    padding: 40px 20px;
+    background: #fff;
+    display: flex;
+    border-radius: 30px;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.result-window .given-data .data {
+    display: flex;
+    gap: 50px;
+}
+
+.result-window .given-data .result {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.result-window .given-data .result button {
+    padding: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #305349;
+    color: #fff;
+}
+
+@media (max-width:900px) {
+    .prediction-window .predict-form {
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+
+    .prediction-window .predict-form {
+        padding: 30px;
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .result-window,
+    .prediction-window {
+        width: 100%;
+    }
+
+    .prediction-window .predict-form .fields {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .result-window .given-data .result button {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .result-window .given-data {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .result-window .given-data .result button {
+        width: 100%;
+    }
+
+}

@@ -1,8 +1,9 @@
 # Import flask and datetime module for showing date and time
 from flask import Flask, request
 from flask_cors import CORS
-from model import predict_data
+from model.model import predict_data
 from PIL import Image
+from chatbot.main import chatbot_response
 # Initializing flask app
 app = Flask(__name__)
 CORS(app)
@@ -44,6 +45,15 @@ def crop_disease():
         f = request.files['file']
         img = Image.open(f)
     return {"success": "success"}
+
+
+@app.route('/chat', methods=["POST"])
+def chatbot():
+    if (request.method == "POST"):
+        msg = request.json['message']
+        res = chatbot_response(msg)
+        print(res)
+        return {"response": res}
 
 
 # Running app
