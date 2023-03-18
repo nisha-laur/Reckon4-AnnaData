@@ -1,8 +1,30 @@
+.message-container {
+    width: 100%;
+    display: flex;
+}
+
+.message-container.sender {
+    justify-content: flex-end;
+}
+
+.message-container.reciver {
+    justify-content: flex-start;
+}
+
 .message-box {
     width: 75%;
-    margin: 10px;
     display: flex;
     align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.message-box.sender {
+    flex-direction: row-reverse;
+}
+
+.message-box.reciver {
+    flex-direction: row;
 }
 
 .message-box svg {
@@ -11,4 +33,21 @@
     background: #000;
     width: 40px;
     height: 40px;
+}
+
+.message-box .message-content {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.message-box .message-content.sender {
+    border-radius: 20px 20px 0px 20px;
+    background-color: dodgerblue;
+}
+
+.message-box .message-content.reciver {
+    border-radius: 20px 20px 20px 0px;
+    background-color: red;
 }

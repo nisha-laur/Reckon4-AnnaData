@@ -4,6 +4,8 @@
     width: 530px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 20px;
+    margin: auto;
+    margin-top: 40px;
 }
 
 .chat-bot-box .chat-detail {
@@ -34,6 +36,9 @@
     height: 60vh;
     width: 100%;
     padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
 }
 
 .chat-bot-box .chat-enter-box {
@@ -63,4 +68,11 @@
     height: 25px;
     fill: #305349;
     margin-right: 10px;
+}
+
+@media (max-width:600px) {
+    .chat-bot-box {
+        width: 95%;
+        height: 100%;
+    }
 }
