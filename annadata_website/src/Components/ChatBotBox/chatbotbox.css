@@ -16,11 +16,13 @@
     border-radius: 20px 20px 0 0;
     gap: 10px;
     align-items: center;
+
 }
 
 .chat-bot-box .chat-detail svg {
     width: 40px;
     height: 40px;
+    background-color: transparent;
 }
 
 .chat-bot-box .chat-detail p {
@@ -28,8 +30,11 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    line-height: 13px;
     text-align: center;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+
 }
 
 .chat-bot-box .chat-message-container {

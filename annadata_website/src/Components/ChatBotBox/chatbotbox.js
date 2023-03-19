@@ -3,8 +3,10 @@ import { FaPaperPlane } from 'react-icons/fa';
 import ChatMessage from '../ChatMessage/chatmessage';
 import Navbar from '../Navbar/navbar';
 import './chatbotbox.css'
+import { redirect, useNavigate } from 'react-router-dom'
 
 export default function ChatBotBox() {
+    const Navigator = useNavigate();
     const [message, setmessage] = useState('');
     const chatWindow = document.querySelector('#chat-message-container');
     const [isStarted, setisStarted] = useState(false);
@@ -28,6 +30,29 @@ export default function ChatBotBox() {
         chatWindow.append(messageWindow);
     }
 
+    const AddLink = (className, message, link_data) => {
+        let messageWindow = document.createElement('div');
+        messageWindow.className = 'message-container ' + className;
+
+        let messageBox = document.createElement('div');
+        messageBox.className = 'message-box ' + className;
+
+        messageWindow.appendChild(messageBox)
+
+        let messageContent = document.createElement('div');
+        messageContent.className = 'message-content ' + className;
+
+        let link = document.createElement('a');
+        link.href = link_data;
+        link.innerHTML = message;
+
+        messageContent.append(link);
+
+        messageBox.appendChild(messageContent);
+
+        chatWindow.append(messageWindow);
+    }
+
 
     const sendMessage = async () => {
         if (message !== '') {
@@ -35,13 +60,19 @@ export default function ChatBotBox() {
             if (message == 'start') {
                 console.log('Neeche diye gaye vikalpo mein se chuniye:\n1. Aaj ka mausam\n2. Konsi fasal ugana uchit hai?\n3. Fasal ka bhav\n4. Sarkari yojnae');
                 AddMessage('reciver', 'Namaskar 🙏 Aaj mai aapki kaise sewa kar sakti hu?');
-                AddMessage('reciver', 'Neeche diye gaye vikalpo mein se chuniye:\n1. Aaj ka mausam\n2. Konsi fasal ugana uchit hai?\n3. Fasal ka bhav\n4. Sarkari yojnae')
+                AddMessage('reciver', 'Neeche diye gaye vikalpo mein se chuniye: <br/> 1. Aaj ka mausam <br/> 2. Konsi fasal ugana uchit hai? <br/> 3. Fasal ka bhav <br/> 4. Sarkari yojnae')
                 AddMessage('reciver', 'Enter choice');
                 setisStarted(true);
             }
 
             else if (!isStarted) {
                 AddMessage('reciver', "Please enter start first");
+            }
+            else if (message == '2') {
+                AddLink('reciver', "Click for Crop Prediction", '/predict');
+            }
+            else if (message == '3') {
+                AddLink('reciver', 'Click for current crop rate', ' https://agmarknet.gov.in/PriceAndArrivals/DatewiseCommodityReport.aspx')
             }
             else {
                 const data = { "message": message };
@@ -61,6 +92,7 @@ export default function ChatBotBox() {
                             AddMessage('reciver', "Humidity: " + data['current_humidity']);
                             AddMessage('reciver', "Description: " + data['description']);
                         }
+
                     })
             }
 
