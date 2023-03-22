@@ -32,7 +32,7 @@
 .nav_underline {
     display: inline-block;
     position: relative;
-    color: gold;
+    color: #305349;
     font-weight: 600;
 }
 
@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 
-.nav2_center button {
+.nav2_right button {
     background-color: transparent;
     border: none;
 }

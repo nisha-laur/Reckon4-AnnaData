@@ -45,7 +45,7 @@ def crop_disease():
     if (request.method == "POST"):
         f = request.files['file']
         img = Image.open(f)
-    return {"success": "success"}
+    return {"response": f}
 
 
 @app.route('/chat', methods=["POST"])
@@ -55,6 +55,14 @@ def chatbot():
         print(msg)
         if (msg == '1'):
             return getWeather('jodhpur')
+
+
+@app.route('/volunteer', methods=["POST"])
+def volunteer():
+    if (request.method == "POST"):
+        data = request.json
+        print(data)
+        return {"response": "success"}
 
 
 # Running app

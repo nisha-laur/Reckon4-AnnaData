@@ -43,6 +43,8 @@ export default function Navbar() {
                     <a href="/service" className='nav_underline'>Services</a>
                     <a href="/blog" className='nav_underline'>Blogs</a>
                     <a href="/contact" className='nav_underline'>Contact us</a>
+                </div>
+                <div className="nav2_right">
                     <button onClick={closeSearchWindow}>
                         <FaSearch size={30} />
                     </button>

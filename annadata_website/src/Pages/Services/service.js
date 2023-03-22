@@ -51,9 +51,9 @@ export default function Service() {
                     <div className="service-divider"></div>
                     <div className="service-content">
                         <div className="service-desc">
-                            Get Alerts Feature
+                            Book Your Drone
                         </div>
-                        <a href="/service">Start</a>
+                        <a href="/drone-form">Start</a>
                     </div>
                 </div>
                 <div className="service">
@@ -77,7 +77,7 @@ export default function Service() {
                         <div className="service-desc">
                             Volunteer Section
                         </div>
-                        <a href="/service">Start</a>
+                        <a href="/volunteer">Start</a>
                     </div>
                 </div>
             </div>

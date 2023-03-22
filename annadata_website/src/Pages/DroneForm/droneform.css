@@ -1,10 +1,10 @@
 .drone-window {
     display: flex;
     width: 100%;
+    background-color: #3CBA7D;
     justify-content: center;
     align-items: center;
     padding-top: 100px;
-    gap: 30px;
 }
 
 .drone-window .drone-form {
@@ -15,7 +15,7 @@
     padding: 60px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: #fff;
+    background-color: #BFC09F;
 }
 
 .drone-window .drone-form h4 {
@@ -23,28 +23,28 @@
 }
 
 .drone-form .fields {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
 .fields .input-field input,
 .fields .input-field select {
-    width: 350px;
+    width: 100%;
     padding: 10px 20px;
-    border: 2px solid #000;
+    border: none;
     outline: none;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 20px;
     background-color: #fff;
 }
 
 .fields .input-field textarea {
-    width: 350px;
+    width: 100%;
     height: 200px;
-    border: 2px solid #000;
+    border: none;
     outline: none;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 20px;
     resize: none;
     font-size: 20px;

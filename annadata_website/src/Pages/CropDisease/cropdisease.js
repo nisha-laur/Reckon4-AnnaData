@@ -49,7 +49,7 @@ export default function CropDisease() {
                             <input type="file" accept="image/*" required="" id="file-input" onChange={fileChangeHandler} />
                         </label>
                     </form>
-                    <button onClick={handleSubmit}>Submit</button>
+                    <button onClick={handleSubmit} className='disease-submit'>Submit</button>
                 </div>
             </div>
         </div>
